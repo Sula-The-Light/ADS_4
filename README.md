@@ -27,7 +27,7 @@ Here are the results :
 
 5. Screenshots:
 
-![Image alt](https://github.com/Sula-The-Light/)
+![Image alt](https://github.com/Sula-The-Light/ADS_4/blob/master/Снимок%20экрана%202026-05-10%20200939.png)
 
 In the end , this project allowed me to see how theoretical complexity $O(V+E)$ behaves in a live environment. On the Small Graph, I noticed that DFS was significantly faster (347k ns vs 1.9M ns). This is likely because the recursive calls for a small set of data have less overhead than initializing a LinkedList for a Queue in BFS. However, as the graph size grew to 100 vertices, the times became more comparable, demonstrating that both algorithms scale linearly with the number of vertices and edges.  
 
