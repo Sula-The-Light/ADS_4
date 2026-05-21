@@ -38,3 +38,30 @@ Theoretically, BFS and DFS should have very similar performance since both visit
 Also , i had one of the main challenges duirng process - it was about managing the adjacency list for an undirected graph. 
 
 Initially, I only added the edge in one direction, which caused my BFS and DFS to stop prematurely. I had to ensure that addEdge properly accounted for both the source and destination to make the graph fully traversable. Additionally, using System.nanoTime() taught me that initial runs are often slower due to class loading, which is why the "Small Graph" BFS time actually looks higher than the "Medium Graph" BFS time.
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+# BONUS TASK : Dijkstra’s Algorithm (Shortest Path) 
+
+The main goal was to expand the existing data structure to work with edge weights and implement Dijkstra's algorithm, a classic tool for finding shortest paths
+
+Evolution of the data structure :
+The first step was to modernize the foundation of the Edge class project. In order for the graph to stop being "uniform" and be able to take into account the cost of moving between nodes, a weight field was added to the edge description. This required a corresponding adjustment of the graph logic: now the addEdge method not only creates a link, but also assigns it a specific weighting factor, while maintaining flexibility for those parts of the program where weight is not required 
+
+Implementation of the search algorithm :
+
+The key task was to implement Dijkstra's algorithm, strictly adhering to the principle of simplicity. Instead of using complex structures such as a priority queue , I used an approach based on the use of regular arrays and basic loops. 
+
+The process of finding the shortest path can be divided into 3 logical stages:
+
+1st one was Preparation. The idea was about initialization of an array of distances, where the initial vertex gets the value "0", and the rest — "infinity", which symbolizes their initial inaccessibility  
+
+The 2nd one is Path selection - at each iteration , the algorithm scans the array , selecting a vertex that has not yet been visited with the minimum accumulated distance
+
+And the last one , Relaxation. For the selected vertex, all its neighbors are checked. If the path through the current vertex turns out to be "cheaper" than the already known one, the value of the shortest distance is updated
+![Image alt](https://github.com/Sula-The-Light/ADS_4/blob/master/Снимок%20экрана%202026-05-21%20215808.png)
+
+
+![Image alt](https://github.com/Sula-The-Light/ADS_4/blob/master/Снимок%20экрана%202026-05-21%20215821.png)
+
+
