@@ -59,6 +59,9 @@ The process of finding the shortest path can be divided into 3 logical stages:
 The 2nd one is Path selection - at each iteration , the algorithm scans the array , selecting a vertex that has not yet been visited with the minimum accumulated distance
 
 And the last one , Relaxation. For the selected vertex, all its neighbors are checked. If the path through the current vertex turns out to be "cheaper" than the already known one, the value of the shortest distance is updated
+
+Screenshots:
+
 ![Image alt](https://github.com/Sula-The-Light/ADS_4/blob/master/Снимок%20экрана%202026-05-21%20215808.png)
 
 
